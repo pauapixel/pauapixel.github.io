@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.0563fc52ce0832733a1e018ca3125f9f.js"
+  "precache-manifest.2ea71dff187e04a43adac0dd2462cf9e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "pauapixel-pwa"});
@@ -32,3 +32,5 @@ self.addEventListener('message', (event) => {
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("index.html"));
